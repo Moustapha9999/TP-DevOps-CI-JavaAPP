@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Université</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .welcome-card {
+      transition: transform 0.3s ease-in-out;
+      border-radius: 15px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .welcome-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .welcome-header {
+      background: linear-gradient(135deg, #007bff, #28a745);
+      color: white;
+    }
+
+    .btn-custom {
+      background: linear-gradient(135deg, #36fac2 0%, #0cb2e4 100%);
+      border: none;
+      padding: 10px 25px;
+      font-weight: 500;
+    }
+
+    .btn-custom:hover {
+      background: linear-gradient(135deg, #f31919 0%, #6a11cb 100%);
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <!-- Header -->
+  <div class="row justify-content-center fade-in">
+    <div class="col-md-10 text-center mb-5">
+      <div class="welcome-header p-4 rounded-3 mb-4">
+        <h1 class="display-5 fw-bold">
+          <i class="bi bi-mortarboard-fill me-2"></i>GESTION UNIVERSITE
+        </h1>
+        <p class="lead mb-0">
+          Plateforme de gestion centralisée des départements universitaires et des enseignants.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="row g-4 mt-4 fade-in">
+    <!-- Enseignants -->
+    <div class="col-md-6">
+      <div class="card welcome-card h-100">
+        <div class="card-body text-center p-4">
+          <i class="bi bi-person-badge-fill text-primary" style="font-size: 3rem;"></i>
+          <h3 class="card-title mt-3">Gestion des Enseignants</h3>
+          <p class="card-text">
+            Gérez efficacement les données des enseignants et leurs affectations dans les départements.
+          </p>
+          <a href="/enseignants" class="btn btn-custom text-white mt-3">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Explorer
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Départements -->
+    <div class="col-md-6">
+      <div class="card welcome-card h-100">
+        <div class="card-body text-center p-4">
+          <i class="bi bi-building-fill text-success" style="font-size: 3rem;"></i>
+          <h3 class="card-title mt-3">Gestion des Départements</h3>
+          <p class="card-text">
+            Créez, modifiez et organisez les départements de votre université en toute simplicité.
+          </p>
+          <a href="/departements" class="btn btn-custom text-white mt-3">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Explorer
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
